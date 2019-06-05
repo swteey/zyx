@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body>
+<table class="table table-striped table-hover">
+    <tr>
+        <td>用户名</td>
+        <td>密码</td>
+
+    </tr>
+    <tr th:each="admin : ${admins}">
+        <td th:text="${admin.aname}">用户名</td>
+        <td th:text="${admin.pwd}">密码</td>
+    </tr>
+
+</table>
+</body>
+</html>
